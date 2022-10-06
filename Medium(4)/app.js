@@ -1,40 +1,31 @@
-// creating Car object 
-let Car = {
-    make: 'Ford',
-    model: 'Raptor',
-    year: 2014,
-    milage: 2000,
-    color: 'red',
-    // creating driveToWork method
-    driveToWork: function () {
-        console.log('driveToWork');
-        // setting new milage to 33 miles
-        this.milage =
-        console.log('New Milage : ' + this.milage);
-    },
-    // creating driveAroundTheWorld method
-    driveAroundTheWorld: function () {
-        console.log('\n')
-        console.log('driveAroundTheWorld');
-        // printing old milage
-        console.log('Old milage : ' + this.milage);
-        // setting new milage to 24000 miles
-        this.milage = '24000 miles'
-        console.log('New Milage : ' + this.milage);
-    },
-    // creating runErrands method
-    runErrands: function () {
-        console.log('\n')
-        console.log('runErrands');
-        // printing old milage
-        console.log('Old milage : ' + this.milage);
-        // setting new milage to 30 miles
-        this.milage = 33
-        console.log(`New milage `);
+// MEDIUM4
+const car = {
+    make: "ford",
+    model: "f150",
+    year: 2004,
+    milage: 163000,
+    color: "blue",
 
+    driveToWork() {
+        var oldMilage = this.milage;
+        this.milage = this.milage + 33;
+        console.log("old milage: " + oldMilage + " | new milage: " + this.milage);
+    },
+
+    driveAroundTheWorld() {
+        var oldMilage = this.milage;
+        this.milage = this.milage + 24000
+        console.log("old milage: " + oldMilage + " | new milage: " + this.milage);
+    },
+
+    runErrands() {
+        var oldMilage = this.milage;
+        this.milage = this.milage + 30
+        console.log("old milage: " + oldMilage + " | new milage: " + this.milage);
     }
-}
-// calling methode
-Car.driveToWork()
-Car.driveAroundTheWorld()
-Car.runErrands()
+};
+
+const car1 = Object.create(car);
+car1.driveToWork();
+car1.driveAroundTheWorld();
+car1.runErrands();
